@@ -1,0 +1,56 @@
+PayPal + Groq AI Integration
+
+This project demonstrates a cloud-hosted Python application that integrates PayPal Sandbox for test payments and Groq AI for LLM-powered chat, all running in Replit.
+
+Getting Started
+
+Follow these steps to run the project:
+
+1. Open the Replit Project
+Go to your Replit dashboard and open the Python Repl containing main.py.
+
+2. Add Secrets (API Keys)
+Click the Secrets (lock icon) in the left sidebar and add the following:
+
+PAYPAL_USER → Your PayPal sandbox API username
+
+PAYPAL_PWD → Your PayPal sandbox API password
+
+PAYPAL_SIGNATURE → Your PayPal sandbox API signature
+
+GROQ_API_KEY → Your Groq API key
+
+Storing secrets this way keeps your credentials safe and out of the code.
+
+3. Check the Code
+Make sure main.py is present and using os.getenv() to access the secrets.
+
+4. Run the Project
+Click the green “Run” button at the top of Replit, or open the Shell and type:
+
+python3 main.py
+
+
+5. Check Console Output
+You should see something like:
+
+ACK=Success
+TOKEN=EC-XXXXXXX
+Redirect user to:
+https://www.sandbox.paypal.com/checkoutnow?token=EC-XXXXXXX
+
+
+6. Test PayPal Payment
+Copy the redirect URL from the console and open it in a browser.
+Log in using your sandbox buyer account to simulate a payment.
+Note: No real money is used — it’s all in sandbox mode.
+
+7. Test Groq AI Chat
+Enter a prompt in the AI section of the program. The app sends it to Groq API and returns a real-time response.
+
+8. End-to-End Verification
+Confirm that both:
+
+PayPal sandbox flow works (ACK=Success + checkout page), and
+
+Groq AI responds correctly to prompts.
